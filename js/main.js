@@ -149,7 +149,7 @@ const Editor = {
   init() {
     console.log('editor init')
     this.$submitBtn = $('.submit-btn')
-    this.markdown = localStorage.getItem("markdown") || `# SecondSlide`
+    this.markdown = localStorage.getItem("markdown") || `# SecondSlide(左上角点击设置开始使用)`
     this.$textarea = $('.content textarea')
     this.$textarea.value = this.markdown
     this.bind()

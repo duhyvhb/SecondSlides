@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SecondSlides - Create Slides in seconds</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3960531_j8fi5jwkcdl.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+			</div>
+		</div>
+    <div class="control active">
+      <i class="iconfont icon-set"></i>
+    </div>
+    <div class="set-container">
+      <div class="menu active">
+        <div class="icon-container">
+          <i class="iconfont icon-close"></i>
+        </div>
+        <ul>
+          <li class="menu-btn">
+            <i class="iconfont icon-bianji"></i>
+            内容编辑
+          </li>
+          <li class="menu-btn">
+            <i class="iconfont icon-zhuti"></i>
+            主题与特效
+          </li>
+          <li class="menu-btn">
+            <i class="iconfont icon-xiazai"></i>
+            下载PDF
+          </li>
+          <li class="menu-btn">
+            <i class="iconfont icon-bangzhu"></i>
+            帮助
+          </li>
+        </ul>
+      </div>
+      <div class="display">
+        <div class="content active">
+          <h2>内容编辑</h2>
+          <textarea name="raw" id="raw" autofocus></textarea>
+          <div class="uploader-container">
+            <label for="img-uploader">
+              <span>点击这里上传并插入图片(大小不超过2MB)</span>
+            </label>
+            <input type="file" id="img-uploader" accept="image/*">
+          </div>
+          <button class="submit-btn">确定</button>
+        </div>
+        <div class="content">
+          <h2>主题与特效</h2>
+          <h3>主题</h3>
+          <ul class="theme-list">
+            <li class="item">
+              <figure>
+                <img src="./img/beige.png" alt="beige">
+                <figcaption>beige</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/black.png" alt="black">
+                <figcaption>black</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/blood.png" alt="blood">
+                <figcaption>blood</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/league.png" alt="league">
+                <figcaption>league</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/moon.png" alt="moon">
+                <figcaption>moon</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/night.png" alt="night">
+                <figcaption>night</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/serif.png" alt="serif">
+                <figcaption>serif</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/simple.png" alt="simple">
+                <figcaption>simple</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/sky.png" alt="sky">
+                <figcaption>sky</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/solarized.png" alt="solarized">
+                <figcaption>solarized</figcaption>
+              </figure>
+            </li>
+            <li class="item">
+              <figure>
+                <img src="./img/white.png" alt="white">
+                <figcaption>white</figcaption>
+              </figure>
+            </li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h3>转场特效</h3>
+          <select id="transition">
+            <option value="slide">滑动效果</option>
+            <option value="fade">淡入淡出</option>
+            <option value="convex">球体效果</option>
+            <option value="concade">忽隐忽现效果</option>
+            <option value="zoom">缩放效果</option>
+          </select>
+          <button class="trans-btn">确定转场效果</button>
+          <h3>页面布局</h3>
+          <select id="layout">
+            <option value="center">居中</option>
+            <option value="left">居左</option>
+            <option value="right">居右</option>
+          </select>
+          <button class="layout-btn">确定布局</button>
+        </div>
+        <div class="content">
+          <h2>下载PDF</h2>
+          <a href="#" class="download" target="_blank">点此下载PDF</a>
+        </div>
+        <div class="content">
+          <h2>帮助</h2>
+          <p class="help">
+            请使用markdown语法进行ppt的书写
+            一级标题为ppt的首页
+            二级标题为ppt的每一页(左右切换)
+            三级标题为二级标题的子页(上下切换)
+            如想进入演讲者模式, 按下S键
+            如想添加演讲者模式的提示Note, 可以在相应页内容的下方添加Note: xxx, 以添加提示
+            请注意: 一级标题是ppt的开始, 一级标题之前的内容不会显示在ppt中
+            图片的上传直接点击链接, 选择图片, 就会将图片url插入至光标处(图片不应大于2MB)
+          </p>
+        </div>
+      </div>
+    </div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.14.0/dist/av-min.js"></script>
+
+    <script src="js/main.js"></script>
+
+	</body>
+</html>
